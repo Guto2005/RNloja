@@ -1,13 +1,17 @@
-import { Stack } from "expo-router";
-import { StyleSheet } from "react-native";
+import { Tabs } from "expo-router";
+import { FontAwesome }from "@expo/vector-icons/FontAwesome";
 
-export function RootLayout(){
+export default function TabLayout(){
     return(
-        <Stack screenOptions={{headerShown:true}}>
-            <Stack.Screen name="index" />
-
-            <Stack.Screen name="test" />
-
-        </Stack>
+        <Tabs screenOptions={{headerShown:true}}>
+            <Tabs.Screen name="index" options={
+                {
+                    title: "Home",
+                    tabBarIcon:({color})
+                }}
+             />
+            <Tabs.Screen name="test1" options={{headerShown:false}}/>
+            <Tabs.Screen name="testdois" options={{title:"Página 2"}}/>
+        </Tabs>
     )
 }
