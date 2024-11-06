@@ -4,8 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Test() {
     return(
         <View style={styles.container}>
-            <Text>Página Teste 2</Text>
-            <Link href="">Clique para ir a tela index</Link>
+            <Text style={styles.titulo}>Página02</Text>
+            <Link href="" style={styles.texto}>Clique para ir a tela index</Link>
         </View>
     );
 }
@@ -16,4 +16,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    titulo: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#ffffff',
+    },
+    texto: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#ffffff',
+    }
 });

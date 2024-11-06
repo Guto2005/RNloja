@@ -4,8 +4,8 @@ import { Link } from "expo-router";
 export default function Test() {
     return(
         <View style={styles.container}>
-            <Text>Página Teste 1</Text>
-            <Link href="/testdois">Clique para ir a tela testdois</Link>
+            <Text style={styles.titulo}>Página01</Text>
+            <Link href="/pagina02" style={styles.texto}>Clique para ir a pagina02</Link>
         </View>
     );
 }
@@ -16,4 +16,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    titulo: {
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
+    texto: {
+        fontSize: 24,
+        fontWeight: 'bold'
+    }
 });
