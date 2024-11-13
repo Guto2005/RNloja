@@ -17,13 +17,13 @@ export default function RootLayout() {
         />
  
         <Tabs.Screen
-        name="categories"
+        name="aboutus"
         options={{
             title: "Início",
             tabBarIcon: ({ color }) =>
                 <FontAwesome
                 size={28}
-                name="house"
+                name="user"
                 color={color} />
         }}
         />
