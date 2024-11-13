@@ -6,7 +6,7 @@ import { Button } from "../components/Button/button";
 
 export default function index() {
     function handlePressButton(){
-        router.replace('/home');
+        router.navigate('/home');
     }
     return (
         <SafeAreaView style={styles.container}>
