@@ -4,7 +4,10 @@ export const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     gap:16,
-    marginBottom:8
+    marginBottom:8,
+    borderBottomColor:'#ccc',
+    borderStyle:'solid',
+    borderBottomWidth:1
   },
   text: {
     color:"#777"
@@ -16,6 +19,7 @@ export const styles = StyleSheet.create({
   },
   textContainer: {
     flex:1,
+    justifyContent:'center'
   },
   destaque:{
     fontWeight:'bold',

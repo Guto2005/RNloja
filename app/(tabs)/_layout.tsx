@@ -1,9 +1,9 @@
 import { Tabs } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome6"
  
-export default function RootLayout() {
+export default function TabLayout() {
   return(
-    <Tabs screenOptions={{tabBarActiveTintColor:"#E67A31"}}>
+    <Tabs screenOptions={{tabBarActiveTintColor:"goldenrod", headerShown:true}}>
         <Tabs.Screen
         name="home"
         options={{
@@ -16,10 +16,22 @@ export default function RootLayout() {
         }}
         />
  
+ <Tabs.Screen
+        name="categories"
+        options={{
+            title: "Categorias",
+            tabBarIcon: ({ color }) =>
+                <FontAwesome
+                size={28}
+                name="folder"
+                color={color} />
+        }}
+        />
+
         <Tabs.Screen
         name="aboutus"
         options={{
-            title: "Início",
+            title: "Quem Somos",
             tabBarIcon: ({ color }) =>
                 <FontAwesome
                 size={28}
@@ -28,6 +40,7 @@ export default function RootLayout() {
         }}
         />
     </Tabs>
+  
   )
 }
  
