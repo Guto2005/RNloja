@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Image, Button } from 'react-native';
 import { data } from '../../data/database';  // Importe os dados
-import { Ionicons } from '@expo/vector-icons';  // Usando ícones para navegação, caso queira adicionar
+import { useRouter } from 'expo-router';  // Hook do expo-router para navegação
 import { styles } from './AboutUsStyle'
 
 export default function AboutUs() {
+  const router = useRouter();  // Usando o hook useRouter do expo-router para navegação
+
   const aboutData = data.aboutData;  // Acesse 'aboutData' diretamente de 'data'
 
   return (
@@ -28,7 +30,9 @@ export default function AboutUs() {
         )}
         keyExtractor={item => item.id.toString()}
       />
+
+      {/* Botão para voltar para a tela "index" */}
+      <Button title="Voltar para Início" onPress={() => router.push('/')} />
     </View>
   );
 }
-

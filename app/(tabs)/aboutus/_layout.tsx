@@ -2,10 +2,12 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import AboutUs from '../../components/AboutUs/AboutUs';  // Componente Quem Somos
-import FilialRJ from '../../components/aboutus/FilialRJ'; // Componente FilialRJ
-import FilialSP from '../../components/aboutus/FilialSP'; // Componente FilialSP
-import { RootTabParamList } from './types'; // Tipagem para as rotas
+import AboutUs from '../../../components/AboutUs/AboutUs';  // Componente Quem Somos
+import FilialRJ from '../../../components/FilialRJ/FilialRJ'; // Componente FilialRJ
+import FilialSP from '../../../components/FilialSP/FilialSP'; // Componente FilialSP
+// app/tabs/_layout.tsx
+import { RootTabParamList } from '../../../types/navigation'; // Caminho para o arquivo navigation.ts
+
 
 // Criação do TabNavigator
 const Tab = createBottomTabNavigator<RootTabParamList>();
